@@ -1,0 +1,21 @@
+#include <behaviores.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bingings/zmk/bt.h>
+
+/ { // Inicio del device tree para este keymap
+    keymap { // Definición del keymap para ZMK
+        compatible = "zmk,keymap"; // Indica que este bloque es un keymap de ZMK
+
+        default_layer { // Definición de la capa por defecto (la que se usa al encender el teclado)
+            bindings = < // Aquí van las asignaciones de teclas, en orden: fila por fila, de izquierda a derecha
+
+                &kp ESC        &none         &kp DEL   &none     &none      &kp COMMA  &kp KP_SLASH  &kp KP_ASTERISK  &kp KP_MINUS    
+                &kp TAP        &kp Q         &kp W     &kp E     &kp BSPC   &kp 7      &kp 8         &kp 9            &kp KP_PLUS    
+                &kp CAPSLOCK   &kp A         &kp S     &kp D     &kp ENTER  &kp 4      &kp 5         &kp 6            &kp ENTER      
+                &kp LSHIFT     &kp Z         &kp X     &kp C                &kp 1      &kp 2         &kp 3            &none          
+                &kp LCTRL      &kp LC(META)  &kp LALT  &kp LEFT  &kp RIGHT  &kp 0      &none         &kp DOT          &none        
+            >;
+        };
+    };
+};
+
